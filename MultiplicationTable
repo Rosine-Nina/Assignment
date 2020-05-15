@@ -1,0 +1,51 @@
+public class MultiplicationTable{
+  int number;
+  int rangemin;
+  int maxrange;
+
+public MultiplicationTable(int a, int b, int c){
+
+   number=a;
+   rangemin=b;
+   maxrange=c;
+}
+public int getnumber(){
+   return number;
+}
+public int rangemin(){
+   return rangemin;
+}
+public int maxrange(){
+   return maxrange;
+}
+public void setNumber (int newnumber){
+  this.number=newnumber;
+}
+public void setRangemin (int newrangemin){
+  this.rangemin=newrangemin;
+}
+public void setMaxrange (int newmaxrange){
+  this.maxrange=newmaxrange;
+}
+public int printTable(){
+ for(int j=rangemin; j<=maxrange;j++){
+ System.out.println(number+"x"+j+"="+number*j);
+}
+
+}
+return 0;
+}
+
+
+public class Main{
+  public static void main(String[]args){
+MultiplicationTablee1 MyfirstMultiplication;
+      MyfirstMultiplication = new MultiplicationTablee1(3,17,25);
+MultiplicationTablee1 MySecondMultiplication;
+      MySecondMultiplication = new MultiplicationTablee1(17,3,49);
+MultiplicationTablee1 MythirdMultiplication;
+      MythirdMultiplication = new MultiplicationTablee1(0,1,5);
+System.out.println(MyfirstMultiplication.printTable());
+}
+  
+}
