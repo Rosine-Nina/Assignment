@@ -1,0 +1,117 @@
+public class YearRange {
+   int firstDivisor;
+   int secondDivisor;
+   int firstYear;
+   int secondYear;
+   int rangeType;
+   public YearRange(int min, int max){
+    firstYear=min;
+    secondYear=max;
+   }
+   public int getFirstDivisor(){
+     return firstDivisor;
+   }
+   
+   public int getSecondDivisor(){
+     return secondDivisor;
+   }
+   public int getFirstYear(){
+     return firstYear;
+   }
+   public int getSecondYear(){
+     return secondYear;
+   }
+   public int getRangeType(){
+     return rangeType;
+   }
+   public void setFirstDivisor(int newFirstDivisor){
+    this.firstDivisor=newFirstDivisor;
+}
+   public void setSecondDivisor(int newSecondDivisor){
+    this.secondDivisor=newSecondDivisor;
+}
+   public void setFirstYear(int newFirstYear){
+    this.firstYear=newFirstYear;
+}
+    public void setSecondYear(int newSecondYear){
+    this.secondYear=newSecondYear;
+}
+      public void setRangeType(int newRangeType){
+    this.rangeType=newRangeType;
+}
+      public int printYears(){
+          if(rangeType==1){
+              for(int i=firstYear;i<=secondYear;i++){
+                  if(i%14==0&&i%20==0){
+                      System.out.println(i);
+                  }
+              }
+          }
+          if (rangeType==2){
+              for (int i=firstYear;i<=secondYear;i++){
+                  if(i%4==0){
+                      System.out.println(i);
+                  }
+              }
+          }
+          if (rangeType == 3){
+          } else {
+              for(int i=firstYear; i<=secondYear; i++){
+                  if(i%4==0 && i%3==0){
+                      System.out.println(i);
+                  }
+              }
+       }
+          return 0;
+      }
+   
+    
+}
+
+
+public class Main{
+
+  
+    public static void main(String[] args) {
+ 
+//Get all years divisible by 14 and 20 
+ 
+YearRange myFirstRange = new YearRange(1314, 2014); 
+myFirstRange.setFistDivisor(14);
+myFirstRange.setSecondDivisor(20);
+myFirstRange.setRangeType(1);
+ 
+ 
+//Get all leap years. 
+ 
+YearRange mySecondRange = new YearRange(1100, 3150); 
+mySecondRange.setRangeType(2); 
+ 
+//Get all Olympic years divisible by 3 
+ 
+YearRange myThirdRange = new YearRange(1500, 1890); 
+myThirdRange.setRangeType(3);
+myThirdRange.setFirstDivisor(3); 
+ 
+ 
+System.out.println("List of all years divisible by "+ 
+                   myFirstRange.getFirstDivisor() + "and" + 
+                   myFirstRange.getSecondDivisor()); 
+                   myFirstRange.printYears(); 
+ 
+ 
+System.out.println(“List of all leap years between ” + 
+                  mySecondRange.getFirstYear() + “ and “ + 
+                  mySecondRange.getSecondYear()); 
+                  mySecondRange.printYears(); 
+    System.out.println(“List of all Olympic years between ” +
+                  myThirdRange.getFirstYear() + “ and “ + 
+                  myThirdRange.getSecondYear() + “ that are divisible by “ +
+                  myThirdRange.getFirstDivisor()); 
+                  myThirdRange.printYears(); 
+ 
+}
+    
+}
+
+
