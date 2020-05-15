@@ -1,0 +1,77 @@
+public class Building {
+ String buildingName;
+ int floorsNum;
+ String colour;
+ int numRoomsFloor;
+ public String getBuildingName(){
+     return buildingName;
+ }
+ public int getFloorsNum(){
+     return floorsNum;
+ }
+  public String getColour(){
+     return colour;
+ }
+  public int getRoomsBuilding(){
+     return floorsNum*numRoomsFloor;
+  }
+  
+ public void setBuildingName( String newbuildingName){
+    this.buildingName=newbuildingName;
+ }
+ public void setColour( String newcolour){
+    this.colour=newcolour;
+ }
+ public void setFloorsNum( int newfloorsNum){
+    this.floorsNum=newfloorsNum;
+ }
+ public void setNumRoomsFloor( int newnumRoomsFloor){
+    this.numRoomsFloor=newnumRoomsFloor;
+ }
+ public void printBuilding(){
+     String [] building = {buildingName, colour};
+     System.out.println(building[0]+"is a"+ building[1]+"building and has"+getRoomsBuilding()+"rooms.\n");
+             }
+ 
+ }
+ 
+ public class Main {
+
+    public static void main(String[] args) {
+        Building myfirstbuilding = new Building();
+        myfirstbuilding.setBuildingName("A");
+        myfirstbuilding.setColour("Green");
+        myfirstbuilding.setFloorsNum(10);
+        myfirstbuilding.setNumRoomsFloor(5);
+        myfirstbuilding.printBuilding();
+        
+        Building mysecondbuilding = new Building();
+        mysecondbuilding.setBuildingName("B");
+        mysecondbuilding.setColour("Red");
+        mysecondbuilding.setFloorsNum(9);
+        mysecondbuilding.setNumRoomsFloor(6);
+        mysecondbuilding.printBuilding();
+        
+        Building mythirdbuilding = new Building();
+        mythirdbuilding.setBuildingName("C");
+        mythirdbuilding.setColour("Pink");
+        mythirdbuilding.setFloorsNum(8);
+        mythirdbuilding.setNumRoomsFloor(5);
+        mythirdbuilding.printBuilding();
+        
+        Building myfourthbuilding = new Building();
+        myfourthbuilding.setBuildingName("D");
+        myfourthbuilding.setColour("Yellow");
+        myfourthbuilding.setFloorsNum(7);
+        myfourthbuilding.setNumRoomsFloor(7);
+        myfourthbuilding.printBuilding();
+
+        Building myfifthbuilding = new Building();
+        myfifthbuilding.setBuildingName("E");
+        myfifthbuilding.setColour("Orange");
+        myfifthbuilding.setFloorsNum(11);
+        myfifthbuilding.setNumRoomsFloor(4);
+        myfifthbuilding.printBuilding();
+    }
+    
+}
